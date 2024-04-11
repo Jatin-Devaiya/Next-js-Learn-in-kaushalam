@@ -2,10 +2,13 @@ import NavBar from "../comoponents/NavBar";
 import { orbitron } from "./fonts";
 import "./globals.css";
 
+export const metadata = {
+  title : "Home Page"
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={orbitron.variable}>
-      <title>next-review</title>
       <body className="flex flex-col px-4 py-2 min-h-screen bg-pink-50">
         <header>
           <NavBar />

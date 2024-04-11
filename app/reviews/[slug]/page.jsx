@@ -1,14 +1,21 @@
 import Heading from "@/comoponents/Heading";
 import getReview, { getSlugs } from "@/lib/reviews";
 
-export async function generateStaticParams(){
+export async function generateStaticParams() {
   const slugs = await getSlugs();
-  return slugs.map((slug)=>({slug}))
+  return slugs.map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({ params: { slug } }) {
+  const review = await getReview(slug);
+  return {
+    title: review.title,
+  };
 }
 
 const ReviewPage = async ({ params: { slug } }) => {
   const review = await getReview(slug);
-  console.log(slug ,"slug");
+  console.log(slug, "slug");
   return (
     <>
       <Heading>{review.title}</Heading>
