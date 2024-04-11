@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../../comoponents/Heading";
 
 export const metadata = {

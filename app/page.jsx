@@ -1,4 +1,3 @@
-import React from "react";
 import Heading from "../comoponents/Heading";
 
 console.log("home page rendring ad");

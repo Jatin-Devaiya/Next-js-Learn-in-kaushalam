@@ -1,7 +1,6 @@
-import React from "react";
-import Link from "next/link";
 import Heading from "@/comoponents/Heading";
 import { getReviews } from "@/lib/reviews";
+import Link from "next/link";
 
 export const metadata = {
   title: "Review Page",
