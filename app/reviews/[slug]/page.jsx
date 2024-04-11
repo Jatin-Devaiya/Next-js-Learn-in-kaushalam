@@ -1,4 +1,5 @@
 import Heading from "@/comoponents/Heading";
+import ShareButton from "@/comoponents/ShareButton";
 import getReview, { getSlugs } from "@/lib/reviews";
 
 export async function generateStaticParams() {
@@ -19,7 +20,10 @@ const ReviewPage = async ({ params: { slug } }) => {
   return (
     <>
       <Heading>{review.title}</Heading>
-      <p className="italic pb-2">{review.date}</p>
+      <div className="flex gap-3 items-baseline">
+        <p className="italic pb-2">{review.date}</p>
+        <ShareButton />
+      </div>
       <img
         src={review.image}
         alt="stardewvalley"
