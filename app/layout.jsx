@@ -25,6 +25,7 @@ export default function RootLayout({ children }) {
           >
             Git-Hub
           </a>
+          {" "} | Deployed on Vercel
         </footer>
       </body>
     </html>
